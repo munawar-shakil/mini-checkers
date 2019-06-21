@@ -92,7 +92,7 @@ export default class Board extends React.Component {
             gridMap[cell.x][cell.y].selected = false;
         });
         gridMap[x][y].selected = true;
-        const jumpList = this.findPossibleJump(gridMap, x, y);
+        const jumpList = [];//this.findPossibleJump(gridMap, x, y);
         const possibleMoveList = jumpList && jumpList.length ? jumpList : this.findPossibleMove(gridMap, x, y);
         this.state.possibleMoveList.forEach(cell => {
             gridMap[cell.x][cell.y].possibleMove = false;
@@ -116,7 +116,7 @@ export default class Board extends React.Component {
         gridMap[lastSelectedPosition.x][lastSelectedPosition.y].diskType = 'e';
         this.clearPossibleMoves(gridMap, possibleMoveList);
         this.clearSelectedList(gridMap, selectedCellList);
-        const middleCell = this.isJumpMove(lastSelectedPosition, {x,y});
+        let middleCell = null;//this.isJumpMove(lastSelectedPosition, {x,y});
         if (middleCell) {
             gridMap[middleCell.x][middleCell.y].diskType = 'e';
         }
@@ -136,7 +136,7 @@ export default class Board extends React.Component {
             });
             gridMap[x][y].selected = true;
         } else {
-            const forceJumpList = this.allPossibleJumpMoveListForCurrentPlayer(gridMap, currentTurn === 'b' ? 'r' : 'b');
+            const forceJumpList = [];//this.allPossibleJumpMoveListForCurrentPlayer(gridMap, currentTurn === 'b' ? 'r' : 'b');
             const moveList = this.allPossibleMoveListForCurrentPlayer(gridMap, currentTurn === 'b' ? 'r' : 'b');
             if(forceJumpList.length) {
                 forceJumpObject = {
