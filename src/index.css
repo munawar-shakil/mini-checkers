@@ -12,3 +12,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.restartButton {
+  background: green;
+  color: white;
+  float: right;
+  height: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 5px;
+  border: 0;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-weight: Bold;
+  border-radius: 7px;
+  box-shadow: 1px 1px 5px rgb(104, 151, 34), -1px -1px 5px  rgb(104, 151, 34);
+  cursor: pointer;
+}
+
+.restartButton:hover {
+  box-shadow: 1px 1px 10px rgb(144, 212, 42), -1px -1px 10px  rgb(144, 212, 42);
+}
+
+.message {
+  color: black;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+}
